@@ -19,7 +19,7 @@ const blog = defineCollection({
     })
 });
 
-const docs = defineCollection({
+const docs2 = defineCollection({
     type: 'content',
     schema: z.object({
         title: z.string(),
@@ -27,6 +27,7 @@ const docs = defineCollection({
         draft: z.boolean().optional(),
     })
 });
+
 
 const releases = defineCollection({
     type: 'content',
@@ -38,7 +39,7 @@ const releases = defineCollection({
 });
 
 export const collections = {
-    docs,
+    docs2,
     blog,
     releases,
 };

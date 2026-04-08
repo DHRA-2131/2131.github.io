@@ -1,0 +1,63 @@
+---
+const {
+  src,
+  error = false,
+  vertical = false,
+} = Astro.props;
+
+// pick aspect ratio
+const aspect = vertical ? "9 / 16" : "16 / 9";
+---
+
+<div class="embed-video" class:list={{ error, vertical }}>
+  {src ? (
+    <iframe
+      src={src}
+      title="Embedded video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  ) : (
+    <pre>No video source provided</pre>
+  )}
+</div>
+<hr></hr>
+
+<style>
+  .embed-video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 24px auto;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--background-secondary);
+    border: 2px solid var(--background-accent-yellow);
+  }
+
+  .embed-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+
+  .embed-video.vertical iframe {
+    aspect-ratio: 9 / 16;
+  }
+
+  .embed-video.error {
+    background-color: hsl(1deg 76% 78% / 50%);
+    border-color: hsl(1deg 76% 78% / 50%);
+  }
+
+  .embed-video.error iframe {
+    display: none;
+  }
+
+  .embed-video pre {
+    margin: 0;
+    padding: 16px;
+  }
+</style>

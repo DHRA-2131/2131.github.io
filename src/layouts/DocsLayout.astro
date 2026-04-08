@@ -19,8 +19,8 @@ const prevPageId = allPages[index - 1];
 const nextPageId = allPages[index + 1];
 
 const [prevPage, nextPage] = await Promise.all([
-  prevPageId && getEntry("docs", prevPageId),
-  nextPageId && getEntry("docs", nextPageId),
+  prevPageId && getEntry("docs2", prevPageId),
+  nextPageId && getEntry("docs2", nextPageId),
 ]);
 ---
 
@@ -64,16 +64,16 @@ const [prevPage, nextPage] = await Promise.all([
             alt="vexide Logo"
         />
         <span slot="title" class="navigation-docs-chip">Docs</span>
-        <NavigationItem selected href="/docs/">Tutorials</NavigationItem>
-        <NavigationItem href="https://docs.rs/vexide/" external>
-            API
-        </NavigationItem>
+        <NavigationItem selected href="/docs2/">Tutorials</NavigationItem>
+        <!-- <NavigationItem href="https://docs.rs/vexide/" external>
+            API -->
+        <!-- </NavigationItem>
         <NavigationItem
             href="https://github.com/vexide/vexide/tree/main/examples"
             external
-        >
-            Examples
-        </NavigationItem>
+        > -->
+            <!-- Examples -->
+        <!-- </NavigationItem> -->
         <DocsSearch slot="right" client:load />
         <Fragment slot="mobile">
             {
@@ -82,7 +82,7 @@ const [prevPage, nextPage] = await Promise.all([
                         <strong class="docs-category-label">{category}</strong>
                         <ul class="docs-category">
                             {entries.map(async (entry) => {
-                                const page = await getEntry("docs", entry)!;
+                                const page = await getEntry("docs2", entry)!;
 
                                 return (
                                     <li
@@ -98,8 +98,8 @@ const [prevPage, nextPage] = await Promise.all([
                                         <a
                                             href={
                                                 page.slug == "index"
-                                                    ? "/docs/"
-                                                    : `/docs/${page.slug}/`
+                                                    ? "/docs2/"
+                                                    : `/docs2/${page.slug}/`
                                             }
                                         >
                                             {page.data.title}
@@ -121,7 +121,7 @@ const [prevPage, nextPage] = await Promise.all([
                         <strong class="docs-category-label">{category}</strong>
                         <ul class="docs-category">
                             {entries.map(async (entry) => {
-                                const page = await getEntry("docs", entry)!;
+                                const page = await getEntry("docs2", entry)!;
 
                                 return !page.data.draft && (
                                     <li
@@ -137,8 +137,8 @@ const [prevPage, nextPage] = await Promise.all([
                                         <a
                                             href={
                                                 page.slug == "index"
-                                                    ? "/docs/"
-                                                    : `/docs/${page.slug}/`
+                                                    ? "/docs2/"
+                                                    : `/docs2/${page.slug}/`
                                             }
                                         >
                                             {page.data.title}
@@ -162,7 +162,7 @@ const [prevPage, nextPage] = await Promise.all([
                     <h1>{currentPage.data.title}</h1>
                     <Button
                         class="edit-on-github"
-                        href={`${GITHUB_ORG_URL}/website/tree/main/src/content/docs/${currentPage.id}`}
+                        href={`${GITHUB_ORG_URL}/website/tree/main/src/content/docs2/${currentPage.id}`}
                     >
                         Edit This Page
                         <svg
@@ -217,8 +217,8 @@ const [prevPage, nextPage] = await Promise.all([
                                     class="page-action prev-page"
                                     href={
                                         prevPage.slug == "index"
-                                            ? "/docs/"
-                                            : `/docs/${prevPage.slug}/`
+                                            ? "/docs2/"
+                                            : `/docs2/${prevPage.slug}/`
                                     }
                                 >
                                     <svg
@@ -242,8 +242,8 @@ const [prevPage, nextPage] = await Promise.all([
                                     class="page-action next-page"
                                     href={
                                         nextPage.slug == "index"
-                                            ? "/docs/"
-                                            : `/docs/${nextPage.slug}/`
+                                            ? "/docs2/"
+                                            : `/docs2/${nextPage.slug}/`
                                     }
                                 >
                                     <div class="page-action-contents">

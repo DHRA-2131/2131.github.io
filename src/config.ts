@@ -53,5 +53,10 @@ export const DOCS_SIDEBAR = {
 	"04. Specific Topics": [
 		"abort",
 		"features",
+	],
+	"05. C++ Stuffs": [
+		"basic-syntax",
+		"classes",
+
 	]
 };

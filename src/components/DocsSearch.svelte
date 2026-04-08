@@ -322,7 +322,7 @@
 
     .search-keyboard-hint kbd {
         font-family: var(--font-monospace);
-        background: var(--grid-color);
+        background: var(--background-tertiary);
         padding: 1px 4px;
         border-radius: 2px;
         color: var(--foreground-secondary);
@@ -344,7 +344,7 @@
         width: 400px;
         right: 0;
         background: var(--background-primary);
-        border: 1px solid var(--background-secondary);
+        border: 2px solid var(--background-accent-yellow);
         border-radius: 8px;
         box-shadow:
             0px 1.2px 2.2px rgba(0, 0, 0, 0.034),
@@ -392,7 +392,7 @@
     .category-title {
         position: sticky;
         top: 0;
-        background: var(--background-primary);
+        background: var(--background-tertiary);
         z-index: 1;
         font-weight: 600;
         display: block;
