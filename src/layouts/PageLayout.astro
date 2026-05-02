@@ -19,7 +19,7 @@ const {
 	title = "Davis High Robotics",
 	description = "Davis High Robotics Academiac",
 	banner = {
-		url: "/images/Davis_logo.jpg",
+		url: "${base}images/Davis_logo.jpg",
 		width: 280,
 		height: 280,
 		alt: "davis logo",
@@ -35,12 +35,12 @@ const {
 			slot="logo"
 			width="36"
 			height="36"
-			src="/images/Davis_logo.jpg"
+			src="${base}images/Davis_logo.jpg"
 			alt="Davis Logo"
 		/>
-		<NavigationItem href="{`${import.meta.env.BASE_URL}learn/`}">General Docummentation</NavigationItem>
-		<NavigationItem href="{`${import.meta.env.BASE_URL}programming/`}">Programming Documentation</NavigationItem>
-		<!-- <NavigationItem href="/blog/">Blog</NavigationItem> -->
+		<NavigationItem href="${base}learn/">General Docummentation</NavigationItem>
+		<NavigationItem href="${base}programming/">Programming Documentation</NavigationItem>
+		<!-- <NavigationItem href="${base}blog/">Blog</NavigationItem> -->
 		<Fragment slot="actions">
 			<Button
 				variant="outlined"
