@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL;
 	<nav class="navigation-inner">
 		{
 			title && (
-				<a href={`${base}website/`} class="navigation-title">
+				<a href={`${base}`} class="navigation-title">
 					<slot name="logo" />
 					<span>{title}</span>
 					<slot name="title" />
