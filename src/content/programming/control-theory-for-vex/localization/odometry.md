@@ -38,7 +38,7 @@ To begin, we must set up a circular arc representing our motions. We will use th
 * $$\theta_{final}$$ - The heading at the end of the timestep
 * $$\Delta \theta$$ - The change in heading during the timestep
 
-<div data-full-width="false"><figure><img src={`/website/images/assets/odometry-arc.png`} alt=""><figcaption><p>Diagram of the robot's motion as a circular arc</p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="/website/images/assets/odometry-arc.png" alt=""><figcaption><p>Diagram of the robot's motion as a circular arc</p></figcaption></figure></div>
 
 After representing the robot's motion over a timestep as an arc, it still isn't apparent how to proceed to get the $$\Delta x$$ and $$\Delta y$$ positions of the robot during the timestep. We need a target of something to solve for. That's where the chord drawn on the figure comes in handy, as if we find the distance between our starting point and end point, we can use basic trigonometry to get our robots change in x and y positions.
 
