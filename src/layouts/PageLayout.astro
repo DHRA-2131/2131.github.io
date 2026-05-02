@@ -1,66 +1,55 @@
 ---
 import Navigation from "components/Navigation.astro";
 import NavigationItem from "components/NavigationItem.astro";
-
 import Button from "components/Button.svelte";
 import { GITHUB_ORG_URL, VEX_FORUM_URL } from "config";
 import BaseLayout, { type Banner } from "./BaseLayout.astro";
 
 interface Props {
-	name?: string;
-	title?: string;
-	type?: string;
-	description?: string;
-	banner?: Banner;
+    name?: string;
+    title?: string;
+    type?: string;
+    description?: string;
+    banner?: Banner;
 }
 
 const base = import.meta.env.BASE_URL;
 
 const {
-	name = "Davis High Robotics",
-	title = "Davis High Robotics",
-	description = "Davis High Robotics Academiac",
-	banner = {
-		url: {"${base}images/Davis_logo.jpg"},
-		width: 280,
-		height: 280,
-		alt: "davis logo",
-		twitter_card: "summary",
-	},
+    name = "Davis High Robotics",
+    title = "Davis High Robotics",
+    description = "Davis High Robotics Academiac",
+    banner = {
+        url: `${base}images/Davis_logo.jpg`,
+        width: 280,
+        height: 280,
+        alt: "davis logo",
+        twitter_card: "summary",
+    },
 } = Astro.props;
 ---
 
 <BaseLayout {name} {title} {description} {banner}>
-	<Button class="skip-to-content" href="#content">Skip to content</Button>
-	<Navigation title="DHS ROBOTICS">
-		<img
-			slot="logo"
-			width="36"
-			height="36"
-			src={"${base}images/Davis_logo.jpg"}
-			alt="Davis Logo"
-		/>
-		<NavigationItem href={"${base}learn/"}>General Docummentation</NavigationItem>
-		<NavigationItem href={"${base}programming/"}>Programming Documentation</NavigationItem>
-		<!-- <NavigationItem href={"${base}blog/"}>Blog</NavigationItem> -->
-		<Fragment slot="actions">
-			<Button
-				variant="outlined"
-				href={VEX_FORUM_URL}
-				target="_blank"
-				rel="noreferrer noopener"
-			>
-				VEX Forum
-			</Button>
-			<Button
-				variant="outlined"
-				href={GITHUB_ORG_URL}
-				target="_blank"
-				rel="noreferrer noopener"
-			>
-				GitHub
-			</Button>
-		</Fragment>
-	</Navigation>
-	<slot />
+    <Button class="skip-to-content" href="#content">Skip to content</Button>
+    <Navigation title="DHS ROBOTICS">
+        <img
+            slot="logo"
+            width="36"
+            height="36"
+            src={`${base}images/Davis_logo.jpg`}
+            alt="Davis Logo"
+        />
+        <NavigationItem href={`${base}learn/`}>General Documentation</NavigationItem>
+        <NavigationItem href={`${base}programming/`}>Programming Documentation</NavigationItem>
+        <!-- <NavigationItem href={`${base}blog/`}>Blog</NavigationItem> -->
+        <Fragment slot="actions">
+            <Button variant="outlined" href={VEX_FORUM_URL} target="_blank" rel="noreferrer noopener">
+                VEX Forum
+            </Button>
+            <Button variant="outlined" href={GITHUB_ORG_URL} target="_blank" rel="noreferrer noopener">
+                GitHub
+            </Button>
+        </Fragment>
+    </Navigation>
+    <slot />
 </BaseLayout>
