@@ -7,7 +7,7 @@ description: "If no devices are showing up, this is what you want to do."
 
 Go to the vex field control download [here](https://vrcfieldapp.vex.com/#). Follow the instructions and download the match field control application to Slot 1 and skills to Slot 2. _Note: This process needs to be done on a chrome browser and cannot be done in firefox :cry:._
 
-<div align="center"><figure><img src={`${base}images/assets/vrcfieldapp.vex.com_.png`} alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src={`${base}images/assets/vrcfieldapp.png`} alt=""><figcaption></figcaption></figure></div>
 
 Upon installing, run the program and change the settings. Timings should be **0:15/1:45** for a V5 Match. At the time of writing vexNet protocol is used over bluetooth for matches. At big competitions where bandwidth may be limited, switching the protocol to bluetooth is recommended. _Note: Using bluetooth will require teams to switch radio mode to start a skills run. Also, note that the settings defualt to Vex U at the time of writing._
 
@@ -30,7 +30,8 @@ If field control manages to sneak its way back on to the brain somehow, try this
 **Step 1: Reset The Brain**
 
 Go to the offical [V5 Reset Website](v5reset.vex.com). Press reset and follow the instructions to figure out which COM (Windows) to select. This should remove all the programs and require a language to be selected. This will not remove the field control block on ports. 
-<div align="center"><figure><img src={`${base}images/assets/v5reset.vex.com_.png`} alt=""><figcaption>Reset Website for the V5 Brain</figcaption></figure></div>
+
+<div align="center"><figure><img src={`${base}images/assets/v5reset.png`} alt=""><figcaption>Reset Website for the V5 Brain</figcaption></figure></div>
 
 **Step 2: Fix The Port Block**
 
