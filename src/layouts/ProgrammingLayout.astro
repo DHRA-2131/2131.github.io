@@ -195,7 +195,7 @@ const [prevPage, nextPage] = await Promise.all([
                 {(prevPage || nextPage) && (
                     <nav class="docs-page-actions">
                         {prevPage ? (
-                            
+                            <a
                                 class="page-action prev-page"
                                 href={prevPage.slug === "index" ? `${base}programming/` : `${base}programming/${prevPage.slug}/`}
                             >
@@ -211,7 +211,7 @@ const [prevPage, nextPage] = await Promise.all([
                             <div />
                         )}
                         {nextPage ? (
-                            
+                            <a
                                 class="page-action next-page"
                                 href={nextPage.slug === "index" ? `${base}programming/` : `${base}programming/${nextPage.slug}/`}
                             >
