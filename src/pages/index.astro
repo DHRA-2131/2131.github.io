@@ -20,9 +20,18 @@ const latestBlogPost = (
 )[0];
 ---
 
+
+
 <PageLayout>
     <main id="content">
+        
         <PageSection id="hero">
+
+            <div slot="outer" class="hero-bg">
+                <div class="bg bg1"></div>
+                <div class="bg bg2"></div>
+            </div>
+
             <div class="hero-left">
                 <div class="hero-lead">
                     <h1 class="title">
@@ -75,6 +84,7 @@ const latestBlogPost = (
     </main>
 </PageLayout>
 
+
 <style>
     @keyframes slide-up {
         from {
@@ -83,36 +93,52 @@ const latestBlogPost = (
         }
     }
 
-    /* Background Grid */
     #hero {
-		
-        background-size:cover  ;
-        background-image: url("../../public/images/horrible_background.jpg");
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        display:block;
+        isolation:isolate;
     }
 
-    #hero::before {
-        content: "";
+    .hero-bg {
         position: absolute;
-        bottom: 0;
-        width: 1800px;
-        height: 75%;
-        margin: 0 auto;
-        opacity: 0.04;
-        display: block;
-        background-image: radial-gradient(80% 100% at center bottom, #6e59ff 30%, #223ca9, transparent 60%);
+        inset: 0;
+        z-index: -1;
     }
+
+    .bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .bg1 { opacity: 1; };
+    }
+    .bg2 { opacity: 0; }
+
 
     #hero > :global(.page-section-inner) {
+        position: relative;
         display: flex;
         gap: 42px;
-        max-block-size: 720px;
+
+        /* max-block-size: 720px; */
         padding-block: 72px;
+        align-items: flex-start;
+
+        margin: 0 auto;
+        z-index: 2;
     }
 
     .hero-left,
     .hero-right {
+        flex: 1 1 60%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .hero-left {
@@ -120,14 +146,16 @@ const latestBlogPost = (
     }
 
     .hero-right {
-        flex: 1 0 50%;
-        min-inline-size: 0;
-        gap: 20px;
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* important */
+        max-height: 640px;
     }
 
     .hero-lead {
         flex: 1 1 auto;
-        background-color: var(--background-secondary);
+        background-color: color-mix(in srgb, var(--background-secondary) 90%, transparent); 
         padding: 2rem;
         border-radius: 10px;
         border: solid 2px;
@@ -154,6 +182,7 @@ const latestBlogPost = (
 
     .hero-right :global(.code-example) {
         animation: slide-up 500ms backwards 500ms;
+        background: color-mix(in srgb, var(--background-tertiary) 90%, transparent)
     }
 
     @media screen and (max-width: 1024px) {
@@ -172,3 +201,40 @@ const latestBlogPost = (
         }
     }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+        "/website/images/assets/2131H_Drivetrain_State_HS.jpg",
+        "/website/images/assets/2131H-Sugar-Rush-HS.jpg",
+        "/website/images/assets/2131H-Worlds-HS.jpg",
+        "/website/images/assets/2131H-Worlds-OU.jpg",
+    ];
+
+    let current = 0;
+    let showingFirst = true;
+
+    const bg1 = document.querySelector(".bg1");
+    const bg2 = document.querySelector(".bg2");
+
+    if (!bg1 || !bg2) return; // safety check
+
+    bg1.style.backgroundImage = `url(${images[0]})`;
+
+    setInterval(() => {
+        current = (current + 1) % images.length;
+
+        if (showingFirst) {
+            bg2.style.backgroundImage = `url(${images[current]})`;
+            bg2.style.opacity = 1;
+            bg1.style.opacity = 0;
+        } else {
+            bg1.style.backgroundImage = `url(${images[current]})`;
+            bg1.style.opacity = 1;
+            bg2.style.opacity = 0;
+        }
+
+        showingFirst = !showingFirst;
+    }, 5000);
+});
+</script>
