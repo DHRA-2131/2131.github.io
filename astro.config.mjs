@@ -27,7 +27,7 @@ import { rehypeTwemoji } from "rehype-twemoji";
 // https://astro.build/config
 export default defineConfig({
   site: "https://dhra-2131.github.io",
-  base: "/2131.github.io",
+  base: "/website",
   trailingSlash: "always",
   integrations: [sitemap(), svelte(), markdown(), mdx()],
 
@@ -106,5 +106,4 @@ export default defineConfig({
     }
   },
 
-  adapter: cloudflare(),
 });
