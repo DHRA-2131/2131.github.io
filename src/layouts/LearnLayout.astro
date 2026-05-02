@@ -35,8 +35,8 @@ const prevPageId = allPages[index - 1];
 const nextPageId = allPages[index + 1];
 
 const [prevPage, nextPage] = await Promise.all([
-  prevPageId && getEntry("learn", prevPageId),
-  nextPageId && getEntry("learn", nextPageId),
+  prevPageId ? getEntry("learn", prevPageId) : undefined,
+  nextPageId ? getEntry("learn", nextPageId) : undefined,
 ]);
 ---
 
