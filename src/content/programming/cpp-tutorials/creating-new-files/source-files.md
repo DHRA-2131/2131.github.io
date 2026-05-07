@@ -9,7 +9,7 @@ A source file contains the actual code that runs. This is where functions, class
 
 **Understanding the File Extension:**
 
-<table data-full-width="false"><thead><tr><th></th><th>C Source File</th><th>C++ Source File</th></tr></thead><tbody><tr><td>File Extension:</td><td><code>.c</code></td><td><p><code>.cpp</code>, <code>.cc</code>, <code>.C</code>, <code>.cxx</code>, <code>.CPP</code>, <code>.cp</code>. </p><p><em>Note: DHRA suggests using</em> <code>.cpp</code></p></td></tr><tr><td>Use-Case</td><td>If your code is strictly coded in the C Programming Language.</td><td>If your code includes: classes, operator overloads, templates, namespaces, or other C++ Features. </td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th></th><th>C Source File</th><th>C++ Source File</th></tr></thead><tbody><tr><td>File Extension:</td><td><code>.c</code></td><td><p><code>.cpp</code>, <code>.cc</code>, <code>.C</code>, <code>.cxx</code>, <code>.CPP</code>, <code>.cp</code>. </p><p><em>Note: DHS suggests using</em> <code>.cpp</code></p></td></tr><tr><td>Use-Case</td><td>If your code is strictly coded in the C Programming Language.</td><td>If your code includes: classes, operator overloads, templates, namespaces, or other C++ Features. </td></tr></tbody></table>
 
 ## Where Source Files Go
 

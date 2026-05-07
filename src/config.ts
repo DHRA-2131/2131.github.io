@@ -98,6 +98,7 @@ export const LEARN_SIDEBAR = {
 			children: [
 				"troubleshooting/add-remove-field-control",
 				"troubleshooting/fix-ports",
+				"troubleshooting/fix-motor",
 				"troubleshooting/install-vex-os",
 			]
 		}

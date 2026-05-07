@@ -205,7 +205,7 @@
         {:else}
             <div class="no-results">
                 <img
-                    src="/docs/no-results.svg"
+                    src="/website/docs/no-results.svg"
                     alt="Ferris the crab holding a magnifying glass."
                     width="137"
                     height="122"

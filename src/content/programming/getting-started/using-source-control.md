@@ -13,7 +13,7 @@ Source control is a program that allows for you to have a version history for a 
 
 _Note: Some terms are missing from this list, such as fork, pull request, and other more complicated things. This is mostly because I don't want to explain them /_ don't know how to use them. Feel free to add them yourself, that is the intent of this website. :smile:
 
-* **Organization** - A shared Github workspace for a team. It can own repositories, teams, and have custom permissions for users. Ask a qualified programmer to add you as a member of the [_**DHRA-2131**_](https://github.com/DHRA-2131) Githu&#x62;_._
+* **Organization** - A shared Github workspace for a team. It can own repositories, teams, and have custom permissions for users. Ask a qualified programmer to add you as a member of the [_**DHS-2131**_](https://github.com/DHRA-2131) Githu&#x62;_._
 * **Remote** - A linked copy of your repository hosted somewhere else. This is usually [Github](https://github.com/). The default remote is often named `origin`. A repository can be public for everyone to see, or private. Only members with select permissions can write to a repository.
 * **Repository** - The project folder tracked by Git. It stores your current files, commit history, and branches. Example: [https://github.com/DHRA-2131/2024-25-2131H](https://github.com/DHRA-2131/2024-25-2131H)
 * **Branch** - A separate line of development inside a repository. Use branches to test changes without breaking the main code. Example: You might have a `dev` branch for code in development and a `stable` branch for another coder to code autonomous routes with.
@@ -28,7 +28,7 @@ _Note: Some terms are missing from this list, such as fork, pull request, and ot
 
 * Git is installed. This was covered [here](installing-an-ide.md#install-git-highly-suggested-please-use-version-control).
 * You have a Github account, sign up [here](https://github.com/signup?ref_cta=Sign+up\&ref_loc=header+logged+out\&ref_page=%2F\&source=header-home). Please do not use your school email, you will lose access to code that you might want to reference later when you graduate.
-* (Suggested) Be added to the DHRA-2131 Organization. Multiple generations of code is hosted there that you can reference.
+* (Suggested) Be added to the DHS-2131 Organization. Multiple generations of code is hosted there that you can reference.
 
 **What is Github?**
 
@@ -41,7 +41,7 @@ _Note: cloning code from a preexisting repository on Github should probably be d
 **Publishing Code to Github Repository**
 
 * Access the source control panel in VSCode. You can use `ctrl + shift + g` to open source control. Alternatively, you can access the source code panel by clicking on the icon located in the left ribbon (Icon: <img src="/website/images/assets/source-control.png" alt="" data-size="line">).
-* Click the Publish to GitHub Button. This will prompt you to publish either a public or private repository of your naming to your account. _Note: Using this method will upload to your account, requiring you to transfer ownership of your repository to DHRA-2131 if you want to include the repository as part of the club's organization._
+* Click the Publish to GitHub Button. This will prompt you to publish either a public or private repository of your naming to your account. _Note: Using this method will upload to your account, requiring you to transfer ownership of your repository to DHS-2131 if you want to include the repository as part of the club's organization._
 
 <figure><img src="/website/images/assets/source-control-create-repository.png" alt=""><figcaption></figcaption></figure>
 
