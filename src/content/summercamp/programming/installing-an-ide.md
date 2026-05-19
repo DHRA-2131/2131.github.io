@@ -11,7 +11,7 @@ Follow the instructions on [https://code.visualstudio.com/Download](https://code
 
 ## 2. Install Extensions for Vex
 
-This tutorial will show you how to install the PROS library, Pros toolchain, and Pros CLI for vex. Other alternatives are Vex Code, Vexide, and Robot-C but they will not be covered in this tutorial.
+This tutorial will show you how to install the PROS library, Pros toolchain, and Pros CLI for vex. Other alternatives include: Vexcode, Vexide, and Robot-C. These will not be covered in this tutorial.
 
 **Create a new profile:**
 
@@ -37,7 +37,7 @@ Press `ctrl + shift + p` and type: `PROS: Verify PROS Installation`. This will r
 
 **Installing Clang (Optional, but Advised)**
 
-Press `ctrl + shift + p` to open the Command Pallet. This is one way of accessing different features of your installed extensions. Type: `clangd: Download language server`. This will prompt you to install clangd, which provides auto-complete, auto-formatting, linting, and error highlighting. For more information on how to use clang and fix clang, visit [How to Fix Clang](../how-fix-clang/ "mention").
+Press `ctrl + shift + p` to open the Command Pallet. This is one way of accessing different features of your installed extensions. Type: `clangd: Download language server`. This will prompt you to install clangd, which provides auto-complete, auto-formatting, linting, and error highlighting. For more information on how to use clang and fix clang, visit [How to Fix Clang](../../../programming/getting-started/how-fix-clang/ "mention").
 
 <figure><img src="/website/images/assets/2131H-extension-pack-clang.png" alt=""><figcaption></figcaption></figure>
 

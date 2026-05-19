@@ -27,6 +27,8 @@ const currentCategory = (Object.entries(SUMMER_CAMP_SIDEBAR).find(([, entries]) 
   flattenEntries(entries as SidebarEntry[]).includes(currentPage.slug)
 ) ?? ["Unknown"])[0];
 
+console.log(allPages)
+
 const index = allPages.indexOf(currentPage.slug);
 const prevPageId = allPages[index - 1];
 const nextPageId = allPages[index + 1];

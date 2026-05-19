@@ -110,10 +110,8 @@ export const PROGRAMMING_SIDEBAR = {
 		{
 			title: "New Project",
 			children: [
-				"getting-started/creating-a-new-pros-project",
 				"getting-started/essence-of-programming", 
 				"getting-started/how-fix-clang", 
-				"getting-started/installing-an-ide", 				 
 				"getting-started/using-source-control", 
 			]
 		}
@@ -198,21 +196,37 @@ export const PROGRAMMING_SIDEBAR = {
 
 export const SUMMER_CAMP_SIDEBAR = {
 	"Everyone" : [
-		// How to edit the website
-		// Organizing Team - Team practices, common pitfalls
-		// Logbooking?		
+		"everyone/day-one-and-team-organization",
+		"everyone/logbooking",
+		"everyone/how-to-edit-website",		
 	],
 	"Programming" : [
-		// Installing Pros
-		// First Project
-		// Driver Control
-		// Move Forwards and Backwards
-		// Turning Left and Right
-		// Using a PID Controller
+		{
+			title: "(In Order)",
+			children: [
+				"programming/instructions",	 
+				"programming/installing-an-ide",
+				"programming/creating-a-new-pros-project",
+				"programming/simple-driver-control",
+				"programming/simple-linear-motion",
+				"programming/simple-turns",
+				"programming/what-next"
+			]
+		}
 	],
 	"Building" : [
-		// Masterclass in vex videos
-		// Install the fusion library
-		// Onshape?
+		{
+			title: "Building Tutorial",
+			children: [
+				"building/vex-masterclass",
+			]
+		},
+		{
+			title: "Computer Aided Design",
+			children: [
+				"building/installing-the-fusion-library",
+				"building/onshape",
+			]
+		}
 	],	
 }
